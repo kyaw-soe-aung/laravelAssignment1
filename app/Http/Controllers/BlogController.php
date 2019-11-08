@@ -39,14 +39,16 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'product_name' => 'required',
+            'review' => 'required',
+            'vote' => 'required'
+
         ]);
   
         Blog::create($request->all());
    
         return redirect()->route('blogs.index')
-                        ->with('success','Blog created successfully.');
+                        ->with('success','Product created successfully.');
     }
    
     /**
@@ -81,14 +83,16 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'product_name' => 'required',
+            'review' => 'required',
+            'vote' => 'required'
+
         ]);
   
         $blog->update($request->all());
   
         return redirect()->route('blogs.index')
-                        ->with('success','Blog updated successfully');
+                        ->with('success','Product updated successfully');
     }
   
     /**
@@ -102,6 +106,6 @@ class BlogController extends Controller
         $blog->delete();
   
         return redirect()->route('blogs.index')
-                        ->with('success','Blogs deleted successfully');
+                        ->with('success','Product deleted successfully');
     }
 }

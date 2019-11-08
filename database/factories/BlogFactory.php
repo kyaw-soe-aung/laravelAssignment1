@@ -7,8 +7,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Blog::class, function (Faker $faker) {
     return [
-        'title' => $faker->sentence,
-        'description' => $faker->paragraph
+        'product_name' => $faker->sentence,
+        'review' => $faker->paragraph,
+        'vote' => $faker->unique()->randomNumber
 
     ];
 });

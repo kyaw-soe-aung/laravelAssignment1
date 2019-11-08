@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Check all Blogs</h2>
+                <h2>Check all Product Reviews</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('blogs.create') }}"> Create new blogs</a>
+                <a class="btn btn-success" href="{{ route('blogs.create') }}">Add New Product Review</a>
             </div>
         </div>
     </div>
@@ -23,13 +23,17 @@
             <th>No</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Vote</th>
+
             <th width="250px">Action</th>
         </tr>
         @foreach ($blogs as $blog)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $blog->title }}</td>
-            <td>{{ $blog->description }}</td>
+            <td>{{ $blog->product_name }}</td>
+            <td>{{ $blog->review }}</td>
+            <td>{{ $blog->vote }}</td>
+
             <td>
                 <form action="{{ route('blogs.destroy',$blog->id) }}" method="POST">
    

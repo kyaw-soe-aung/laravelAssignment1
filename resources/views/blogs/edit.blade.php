@@ -30,14 +30,21 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Title:</strong>
-                    <input type="text" name="title" value="{{ $blog->title }}" class="form-control" placeholder="Title">
+                    <strong>Product Name:</strong>
+                    <input type="text" name="product_name" value="{{ $blog->product_name }}" class="form-control" placeholder="Title">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Description:</strong>
-                    <textarea class="form-control" style="height:150px" name="description" placeholder="Description">{{ $blog->description }}</textarea>
+                    <strong>Review:</strong>
+                    <textarea class="form-control" style="height:150px" name="review" placeholder="Description">{{ $blog->review }}</textarea>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Vote:</strong>
+                    <input type="text" name="vote" value="{{ $blog->vote }}" class="form-control" placeholder="Title">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
